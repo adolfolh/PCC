@@ -104,3 +104,39 @@ for digits in digits_tuple:
 
 # You can't change specific values in a tuple but you can change
 # the values of the whole tuple
+
+print("\n\n" + "--------------------------------------------------")
+print("chapter 5: if statements".title().center(50))
+print("--------------------------------------------------")
+
+# simple IF-else statement example
+cars = ['audi', 'bmw', 'subaru', 'toyota']
+for car in cars:
+    if car == 'bmw':
+        print(car.upper())
+    else:
+        print(car.title())
+
+# checking multiple conditions (AND)
+if cars[0] == 'audi' and cars[1] == 'bmw':
+    print("\nI love cars!", end= " ")
+
+# checking multiple conditions (OR)
+if cars[0] == 'audi' or cars[1] == 'audi':
+    print("But I hate Audi...")
+
+# look for value in a list
+if 'audi' in cars:
+    cars.remove("audi")
+if 'audi' not in cars:
+    print("These are my favourite cars:", end=" ")
+for car in cars:
+    print(car.title(), end= " ")
+
+# The if-elif-else chain
+if 'audi' not in cars:
+    cars.insert(0, "audi")
+elif 'jaguar' not in cars:
+    cars.append("jaguar")
+else:
+    print(cars)
