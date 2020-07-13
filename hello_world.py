@@ -41,7 +41,7 @@ print("-------------------------------------------------------------------------
 print(intro_msg[0].title() + "! I'm new to Python...\n")
 # print(intro_msg)
 
-print("\n" + "--------------------------------------------------------------------------------")
+print("--------------------------------------------------------------------------------")
 print("chapter 4: working with lists".title().center(80))
 print("--------------------------------------------------------------------------------")
 
@@ -239,8 +239,8 @@ print(f"\nTotal number of aliens: {len(aliens)}")
 
 # store information about a pizza being ordered
 pizza = {
-    'crust' : 'thick',
-    'toppings' : ['mushrooms','extra cheese']
+    'crust': 'thick',
+    'toppings': ['mushrooms', 'extra cheese']
 }
 
 print("\nWelcome to Domino's:".upper())
@@ -249,3 +249,68 @@ print(f"You ordered a {pizza['crust']}-crust pizza with the following toppings:"
 
 for topping in pizza["toppings"]:
     print(f"\t- {topping}")
+
+print("\n" + "--------------------------------------------------------------------------------")
+print("chapter 7: user input and while loops".title().center(80))
+print("--------------------------------------------------------------------------------")
+
+# input() function for user input
+prompt = "Tell me something, and I will repeat it back to you."
+prompt += "\nType 'quit' to end the conversation... "
+message =""
+# while message != "quit":
+#     message = input(prompt)
+#     if message != "quit":
+#         print("\n" + message + "\n")
+
+# flags
+active = True
+while active:
+    message = input(prompt)
+
+    if message == "quit":
+        active = False
+    else:
+        print("\n" + message + "\n")
+
+# break
+prompt = "\nPlease enter the name of a city you have visited:"
+prompt += "\n(Enter 'quit' when you are finished.) "
+
+while True:
+    city = input(prompt)
+
+    if city == 'quit':
+        break
+    else:
+        print(f"I'd love to go to {city.title()}!")
+
+# continue (returns to the start of a loop)
+print("\nOdd Numbers (0 - 10):")
+current_number = 0
+while current_number < 10:
+    current_number += 1
+    if current_number % 2 == 0:
+        continue
+
+    print(f"\t- {current_number}")
+
+# use while loops to modify lists and dictionaries // don't use for loops to modify lists
+
+responses = {}
+# Set a flag to indicate that polling is active.
+polling_active = True
+while polling_active:
+# Prompt for the person's name and response.
+    name = input("\nWhat is your name? ")
+    response = input("Which mountain would you like to climb someday? ")
+# Store the response in the dictionary.
+    responses[name] = response
+# Find out if anyone else is going to take the poll.
+    repeat = input("Would you like to let another person respond? (yes/ no) ")
+    if repeat == 'no':
+        polling_active = False
+# Polling is complete. Show the results.
+print("\n--- Poll Results ---")
+for name, response in responses.items():
+    print(f"{name} would like to climb {response}.")
