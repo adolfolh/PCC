@@ -383,3 +383,96 @@ def chapter9():
     # a method from the parent class.
 
     # Class names should be written in CamelCase
+
+def chapter10():
+    print("\n" + "--------------------------------------------------------------------------------")
+    print("chapter 10: files and exceptions".title().center(80))
+    print("--------------------------------------------------------------------------------")
+
+    filename = "pi_digits"
+
+    ## opening, reading and printing text file
+    # with open(filename) as file_object:
+    #     contents = file_object.read()
+    # print(contents)
+
+    # with open(filename) as file_object:
+    #     for line in file_object:
+    #         print(line.rstrip())
+
+    # with open(filename) as file_object:
+    #     lines = file_object.readlines()
+    #
+    # for line in lines:
+    #     print(line.rstrip())
+
+    with open(filename) as file_object:
+        lines = file_object.readlines()
+
+    pi_string = ""
+    for line in lines:
+        pi_string += line.strip()
+
+    print(pi_string)
+    print(f"{len(pi_string)} characters of pi")
+
+    # birthday = input("Enter your birthday, in the form mmddyy: ")
+    # if birthday in pi_string:
+    #     print("Your birthday appears in the first million digits of pi!")
+    # else:
+    #     print("Your birthday does not appear in the first million digits of pi.")
+
+    filename = 'programming.txt'
+
+    # writing to a file
+    with open(filename, 'w') as file_object:
+        file_object.write("I love programming.\n")
+        file_object.write("I love creating new games.")
+
+    # You can open a file in read mode ('r'), write mode ('w'), append mode ('a'), or a mode that allows
+    # you to read and write to the file ('r+'). If you omit the mode argument, Python opens the file in read-only mode
+    # by default.
+
+    # Exceptions
+    # Handling the ZeroDivisionError Exception
+    try:
+        print(5 / 0)
+    except ZeroDivisionError:
+        print("You can't divide by zero!")
+
+    print("Give me two numbers, and I'll divide them.")
+    print("Enter 'q' to quit.")
+
+    while True:
+        first_number = input("\nFirst number: ")
+        if first_number == 'q':
+            break
+        second_number = input("Second number: ")
+        if second_number == 'q':
+            break
+
+        try:
+            answer = int(first_number) / int(second_number)
+        except ZeroDivisionError:
+            print("You can't divide by zero!") # use pass so that Python does nothing
+        else:
+            print(answer)
+
+        # json
+        import json
+
+        numbers = [2, 3, 5, 7, 11, 13]
+        filename = "numbers.json"
+        with open(filename, "w") as f:
+            json.dump(numbers, f)
+
+        with open(filename, "r") as f:
+            numbers = json.load(f)
+        print(numbers)
+
+        username = input("What is your name? ")
+
+        filename = 'username.json'
+        with open(filename, 'w') as f:
+            json.dump(username, f)
+            print(f"We'll remember you when you come back, {username}!")
