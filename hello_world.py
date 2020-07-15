@@ -358,3 +358,28 @@ def chapter8():
 
     # importing modules: module_name
     # from module_name import function_name_0, function_name_1, function_name_2 as new_function_name
+
+def chapter9():
+    print("\n" + "--------------------------------------------------------------------------------")
+    print("chapter 9: classes".title().center(80))
+    print("--------------------------------------------------------------------------------")
+
+    # A function that’s part of a class is a method. Everything you learned about functions applies
+    # to methods as well; the only practical difference for now is the way we’ll call methods.
+
+    # The __init__() method is a special method that Python runs automatically whenever we create a
+    # new instance based on a class.
+
+    # We define the __init__() method to have three parameters: self, name, and age. The self parameter
+    # is required in the method definition, and it must come first before the other parameters.
+    # It must be included in the def- inition because when Python calls this method later (to create an
+    # instance of Dog), the method call will automatically pass the self argument. Every method call
+    # associated with an instance automatically passes self, which is a reference to the instance itself;
+    # it gives the individual instance access to the attributes and methods in the class.
+
+    # To access the attributes of an instance, you use dot notation
+
+    # The super() function is a special function that allows you to call
+    # a method from the parent class.
+
+    # Class names should be written in CamelCase
