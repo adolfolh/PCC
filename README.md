@@ -6,8 +6,6 @@ I won't spend too much time on the first chapters as I have some experience prog
   
 **NOTE:** I used the First Edition of the book for the first 6 Chapters and the Second Edition for the rest, thus why I don't use f-strings in the beginning.
 
-- - - -
-
 ## Projects 
 - ### [Alien Invasion](http://www.github.com/adolfolh/alien_invasion "Alien Invasion")  
   - [ ] Chapter 12: A Ship that Fires Bullets  
