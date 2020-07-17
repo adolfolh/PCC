@@ -21,3 +21,5 @@ I won't spend too much time on the first chapters as I have some experience prog
   - [ ] Chapter 18: Getting Started with Django
   - [ ] Chapter 19: User Accounts  
   - [ ] Chapter 20: Styling and Deploying an App 
+
+## Learning Outcomes
