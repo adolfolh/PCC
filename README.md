@@ -13,7 +13,7 @@ I won't spend too much time on the first chapters as I have some experience prog
   - [ ] Chapter 14: Scoring  
   
 - ### [Data Visualization](http://www.github.com/adolfolh/data-intro "Data Visualization")
-  - [ ] Chapter 15: Generating Data 
+  - [x] Chapter 15: Generating Data 
   - [ ] Chapter 16: Downloading Data  
   - [ ] Chapter 17: Working with APIs  
   
